@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, follow">
+<meta name="color-scheme" content="dark">
+<title>CREATIVE.STUDIO – Dawid</title>
+<style>
+  :root{--bg:#0e0f13;--card:#171922;--line:#2a2d3a;--text:#f2f3f7;--muted:#9aa0b4;--accent:#ff4d52;--accent-dark:#a8141a;}
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  body{padding:env(safe-area-inset-top,0) 16px env(safe-area-inset-bottom,0);display:flex;flex-direction:column;align-items:center}
+  header{width:100%;max-width:640px;display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  .brand{color:var(--text);text-decoration:none;font-weight:800;letter-spacing:.14em;font-size:.85rem}
+  .langs button{background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:4px 9px;margin-left:6px;font:inherit;font-size:.8rem;cursor:pointer}
+  .langs button[aria-pressed="true"]{color:var(--text);border-color:var(--muted)}
+  main{width:100%;max-width:640px;flex:1}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+  .pic{background:#0a0b0f;display:flex;justify-content:center;min-height:120px}
+  .pic img{display:block;max-width:100%;max-height:70vh;height:auto;width:auto}
+  .info{padding:20px 22px 26px;text-align:center}
+  h1{font-size:1.15rem;line-height:1.35;margin:0 0 6px;font-weight:700;overflow-wrap:anywhere}
+  .sub{color:var(--muted);font-size:.9rem;margin:0 0 22px}
+  .stage{perspective:700px;display:inline-block;padding:6px 0 14px}
+  .btn3d{display:inline-block;position:relative;padding:18px 46px;border-radius:16px;color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:.02em;
+    background:linear-gradient(#ff6a6e,#e3262d);
+    box-shadow:0 1px 0 rgba(255,255,255,.45) inset,0 6px 0 var(--accent-dark),0 10px 0 #5e0b0f,0 20px 28px rgba(0,0,0,.45);
+    transform:translateY(0) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .12s ease,box-shadow .12s ease;will-change:transform}
+  .btn3d:hover{transform:translateY(-2px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}
+  .btn3d:active{transform:translateY(8px);box-shadow:0 1px 0 rgba(255,255,255,.45) inset,0 0 0 var(--accent-dark),0 2px 0 #5e0b0f,0 8px 12px rgba(0,0,0,.4)}
+  .btn3d:focus-visible{outline:3px solid #fff;outline-offset:4px}
+  .note{color:var(--muted);font-size:.8rem;margin:6px 0 0}
+  .err{padding:40px 22px;text-align:center;color:var(--muted)}
+  .err a{color:var(--text)}
+  footer{width:100%;max-width:640px;padding:22px 0 28px;text-align:center;color:var(--muted);font-size:.75rem}
+  footer a{color:var(--muted)}
+  @media (prefers-reduced-motion:reduce){.btn3d{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="/" id="brand">CREATIVE.STUDIO</a>
+  <div class="langs" role="group" aria-label="Language">
+    <button type="button" data-l="pl">PL</button><button type="button" data-l="en">EN</button><button type="button" data-l="nl">NL</button>
+  </div>
+</header>
+<main><div class="card" id="card"></div></main>
+<footer><span id="disc"></span> · <a href="/">dav-studio.vercel.app</a></footer>
+
+<script>
+(function () {
+  // ====== USTAWIENIA ======
+  var PARTNERIZE_CAMREF = '';   // wpisz kod z Partnerize (ciag po "camref:"); puste = zwykly link do Adobe Stock
+  // ========================
+
+  var T = {
+    pl: { buy: 'Kup na Adobe Stock', hint: 'Po kliknięciu przejdziesz do Adobe Stock, gdzie wybierzesz licencję.', disc: 'Zawiera linki partnerskie', bad: 'Nie znaleziono zdjęcia.', home: 'Zobacz całe portfolio', alt: 'Podgląd zdjęcia' },
+    en: { buy: 'Buy on Adobe Stock', hint: 'You will be taken to Adobe Stock, where you can choose a licence.', disc: 'Contains affiliate links', bad: 'Image not found.', home: 'See the full portfolio', alt: 'Image preview' },
+    nl: { buy: 'Koop op Adobe Stock', hint: 'Je gaat naar Adobe Stock, waar je een licentie kiest.', disc: 'Bevat affiliate-links', bad: 'Afbeelding niet gevonden.', home: 'Bekijk het hele portfolio', alt: 'Voorbeeld van de afbeelding' }
+  };
+  var q = new URLSearchParams(location.search);
+  var lang = (q.get('l') || (navigator.language || 'pl')).slice(0, 2).toLowerCase();
+  if (!T[lang]) lang = 'pl';
+
+  // --- walidacja parametrow: adres docelowy budujemy WYLACZNIE z numeru zdjecia ---
+  var id = (q.get('id') || '').trim();
+  var okId = /^\d{8,11}$/.test(id);
+  var slug = (q.get('a') || '').trim();
+  if (!/^[A-Za-z0-9_%\-]{1,200}$/.test(slug)) slug = 'image';
+  var title = (q.get('t') || '').replace(/\s+/g, ' ').trim().slice(0, 140);
+
+  var img = (q.get('i') || '').trim();
+  if (img && !/^https?:\/\//i.test(img)) img = 'https://' + img;
+  var imgOk = false;
+  try { var u = new URL(img); imgOk = u.protocol === 'https:' && (/(^|\.)ftcdn\.net$/i.test(u.hostname) || /(^|\.)adobe\.com$/i.test(u.hostname)); } catch (e) {}
+
+  function adobeUrl() {
+    var base = 'https://stock.adobe.com/pl/images/' + slug + '/' + id;
+    if (/^[A-Za-z0-9]{3,40}$/.test(PARTNERIZE_CAMREF)) {
+      var pubref = 'pin' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+      return 'https://prf.hn/click/camref:' + PARTNERIZE_CAMREF + '/pubref:' + pubref + '/destination:' + encodeURIComponent(base);
+    }
+    return base;
+  }
+
+  var card = document.getElementById('card');
+  function el(tag, attrs, text) {
+    var e = document.createElement(tag);
+    if (attrs) for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  function render() {
+    var s = T[lang];
+    document.documentElement.lang = lang;
+    document.getElementById('disc').textContent = s.disc;
+    [].forEach.call(document.querySelectorAll('.langs button'), function (b) { b.setAttribute('aria-pressed', String(b.dataset.l === lang)); });
+    card.textContent = '';
+    if (!okId) {
+      var err = el('div', { 'class': 'err' }, s.bad + ' ');
+      err.appendChild(el('a', { href: '/' }, s.home));
+      card.appendChild(err);
+      return;
+    }
+    if (imgOk) {
+      var pic = el('div', { 'class': 'pic' });
+      pic.appendChild(el('img', { src: img, alt: title || s.alt, decoding: 'async', referrerpolicy: 'no-referrer' }));
+      card.appendChild(pic);
+    }
+    var info = el('div', { 'class': 'info' });
+    if (title) info.appendChild(el('h1', null, title));
+    info.appendChild(el('p', { 'class': 'sub' }, s.hint));
+    var stage = el('div', { 'class': 'stage' });
+    var a = el('a', { 'class': 'btn3d', id: 'buy', href: adobeUrl(), rel: 'sponsored noopener', target: '_self' }, s.buy);
+    stage.appendChild(a);
+    info.appendChild(stage);
+    card.appendChild(info);
+    // delikatne pochylenie 3D za kursorem (wylaczone przy reduced-motion)
+    if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      stage.addEventListener('pointermove', function (e) {
+        var r = a.getBoundingClientRect();
+        var x = ((e.clientX - r.left) / r.width - 0.5), y = ((e.clientY - r.top) / r.height - 0.5);
+        a.style.setProperty('--ry', (x * 14).toFixed(1) + 'deg');
+        a.style.setProperty('--rx', (-y * 14).toFixed(1) + 'deg');
+      });
+      stage.addEventListener('pointerleave', function () { a.style.setProperty('--rx', '0deg'); a.style.setProperty('--ry', '0deg'); });
+    }
+  }
+  [].forEach.call(document.querySelectorAll('.langs button'), function (b) {
+    b.addEventListener('click', function () { lang = b.dataset.l; render(); });
+  });
+  render();
+})();
+</script>
+</body>
+</html>
