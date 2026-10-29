@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Photoshop i Lightroom dla początkujących – jak zacząć krok po kroku | CREATIVE.STUDIO</title>
+<meta name="description" content="Praktyczny poradnik dla początkujących: czym różnią się Photoshop i Lightroom, jak zaimportować i obrobić zdjęcia, jak pracować na warstwach i jak wyeksportować gotowy plik.">
+<link rel="canonical" href="https://dav-studio.vercel.app/blog-photoshop-lightroom.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Photoshop i Lightroom dla początkujących – jak zacząć krok po kroku | CREATIVE.STUDIO"><meta property="og:description" content="Praktyczny poradnik dla początkujących: czym różnią się Photoshop i Lightroom, jak zaimportować i obrobić zdjęcia, jak pracować na warstwach i jak wyeksportować gotowy plik."><meta property="og:url" content="https://dav-studio.vercel.app/blog-photoshop-lightroom.html"><meta property="og:site_name" content="CREATIVE.STUDIO">
+<meta name="color-scheme" content="dark">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Photoshop i Lightroom dla początkujących – jak zacząć krok po kroku","datePublished":"2026-10-27","inLanguage":"pl","author":{"@type":"Person","name":"Dawid"},"mainEntityOfPage":"https://dav-studio.vercel.app/blog-photoshop-lightroom.html"}</script>
+<style>
+:root{--bg:#04050a;--fg:#f4f5f8;--muted:#a6abbb;--line:rgba(255,255,255,.12);--card:rgba(255,255,255,.04);--a:#35d0ff;--b:#9b6bff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{margin:0;padding:0;box-sizing:inherit}html{scroll-behavior:smooth}
+body{background:radial-gradient(60% 40% at 80% 0%,rgba(155,107,255,.18),transparent),var(--bg);color:var(--fg);font:17px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px clamp(20px,5vw,56px);border-bottom:1px solid var(--line)}
+.logo{font-size:12px;font-weight:700;letter-spacing:.4em;text-transform:uppercase;color:var(--fg);text-decoration:none}
+nav a{color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-left:22px}nav a:hover{color:var(--fg)}
+main{max-width:760px;margin:0 auto;padding:48px 22px 70px}
+.meta{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--a)}
+h1{font-weight:300;font-size:clamp(30px,6vw,46px);line-height:1.15;letter-spacing:-.02em;margin:14px 0 18px}
+h2{font-weight:500;font-size:clamp(21px,4vw,27px);margin:42px 0 12px;letter-spacing:-.01em}h3{font-weight:600;font-size:18px;margin:26px 0 8px}
+p,ul,ol{margin:0 0 16px;color:#dfe2ec}ul,ol{padding-left:22px}li{margin-bottom:8px}
+.lead{font-size:19px;color:var(--muted)}a{color:var(--a)}strong{color:#fff}
+.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin:22px 0}
+.box p:last-child{margin:0}.toc a{text-decoration:none}
+kbd{background:#15172a;border:1px solid var(--line);border-radius:6px;padding:1px 7px;font:13px ui-monospace,Menlo,Consolas,monospace;white-space:nowrap}
+table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:15px}th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}th{background:var(--card)}
+.btn{display:inline-block;background:var(--fg);color:#0a0b12;text-decoration:none;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:14px 22px;border-radius:99px;margin:6px 8px 6px 0}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.note{font-size:13px;color:var(--muted)}
+.card{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:22px;transition:border-color .3s}.card:hover{border-color:var(--a)}
+.card h2{margin:6px 0 8px}.card p{margin:0;color:var(--muted)}
+footer{max-width:760px;margin:0 auto;padding:26px 22px 50px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);line-height:1.7}footer a{color:var(--muted)}
+</style></head><body>
+<header><a class="logo" href="index.html">CREATIVE.STUDIO</a><nav><a href="index.html">Strona główna</a><a href="blog.html">Blog</a></nav></header>
+<main>
+
+<p class="meta">Poradnik · 27 października 2026 · ok. 8 min czytania</p>
+<h1>Photoshop i Lightroom dla początkujących – jak zacząć krok po kroku</h1>
+<p class="lead">Photoshop i Lightroom często wymienia się jednym tchem, ale służą do czegoś innego. Poniżej znajdziesz prosty plan pracy: od instalacji, przez pierwszą obróbkę zdjęcia, po eksport gotowego pliku. Bez żargonu i bez zakładania, że cokolwiek już umiesz.</p>
+
+<div class="box toc"><strong>Spis treści</strong>
+<ol>
+<li><a href="#roznica">Photoshop czy Lightroom – co do czego?</a></li>
+<li><a href="#start">Zanim zaczniesz: instalacja i pliki</a></li>
+<li><a href="#lightroom">Lightroom w 5 krokach</a></li>
+<li><a href="#photoshop">Photoshop w 5 krokach</a></li>
+<li><a href="#razem">Jak połączyć oba programy</a></li>
+<li><a href="#bledy">Najczęstsze błędy początkujących</a></li>
+<li><a href="#skroty">Skróty, które warto znać</a></li>
+</ol></div>
+
+<h2 id="roznica">Photoshop czy Lightroom – co do czego?</h2>
+<p><strong>Lightroom</strong> służy do porządkowania i obróbki zdjęć hurtem: wybierasz najlepsze ujęcia, poprawiasz światło i kolory, a potem eksportujesz całą serię. <strong>Photoshop</strong> to narzędzie do pracy na pojedynczym obrazie z wykorzystaniem warstw: retusz, wycinanie, łączenie kilku zdjęć, napisy i grafiki.</p>
+<table>
+<tr><th></th><th>Lightroom</th><th>Photoshop</th></tr>
+<tr><td>Najlepszy do</td><td>obróbki całych serii zdjęć, porządkowania biblioteki</td><td>retuszu, kompozycji, grafik z wieloma elementami</td></tr>
+<tr><td>Sposób pracy</td><td>suwaki i presety, zmiany nie niszczą oryginału</td><td>warstwy, maski, zaznaczenia</td></tr>
+<tr><td>Dla kogo na start</td><td>większość osób zaczynających z fotografią</td><td>gdy potrzebujesz czegoś więcej niż korekty światła i koloru</td></tr>
+</table>
+<p>Jeśli masz tylko zdjęcia i chcesz je ładnie wywołać, zacznij od Lightrooma. Do Photoshopa przejdź, gdy zobaczysz, że suwaki nie wystarczają, na przykład trzeba usunąć obiekt z tła albo złożyć grafikę z kilku elementów.</p>
+
+<h2 id="start">Zanim zaczniesz: instalacja i pliki</h2>
+<ul>
+<li><strong>Instalacja:</strong> oba programy instalujesz z aplikacji Creative Cloud. Sprawdź na stronie Adobe, które plany zawierają Photoshop i Lightroom oraz czy dostępny jest okres próbny (<a data-adobe href="https://www.adobe.com/pl/creativecloud/photography.html">plan Fotografia</a>, <a data-adobe href="https://www.adobe.com/pl/creativecloud.html">Creative Cloud</a>). Skład planów i ceny się zmieniają, więc patrz zawsze na bieżącą ofertę.</li>
+<li><strong>Dwie wersje Lightrooma:</strong> <em>Lightroom Classic</em> działa na plikach na Twoim komputerze (z katalogiem), a <em>Lightroom</em> przechowuje zdjęcia w chmurze i synchronizuje je z telefonem. Na początek wybierz tę, którą oferuje Twój plan i która bardziej pasuje do sposobu, w jaki przechowujesz zdjęcia.</li>
+<li><strong>RAW zamiast JPEG:</strong> jeśli aparat potrafi, zapisuj zdjęcia w RAW. Zawierają więcej informacji o świetle i kolorze, więc znacznie lepiej znoszą korektę.</li>
+<li><strong>Kopia zapasowa:</strong> zanim zaczniesz, skopiuj oryginały w drugie miejsce. Lightroom nie nadpisuje oryginałów, ale dysk może się zepsuć.</li>
+</ul>
+<p class="note">Do ćwiczeń użyj własnych zdjęć. Pobrane z internetu mogą mieć ograniczenia licencyjne.</p>
+
+<h2 id="lightroom">Lightroom w 5 krokach</h2>
+<h3>1. Zaimportuj zdjęcia</h3>
+<p>W Lightroomie Classic kliknij <strong>Importuj</strong>, w Lightroomie <strong>Dodaj zdjęcia</strong>. Wskaż folder ze zdjęciami i zatwierdź. Zdjęcia pojawią się w bibliotece.</p>
+<h3>2. Wybierz najlepsze ujęcia</h3>
+<p>Przeglądaj zdjęcia i oznaczaj te dobre flagami lub gwiazdkami, a słabe odrzucaj. Nie obrabiaj wszystkiego: obrabiaj tylko wybrane. To najbardziej oszczędzający czas nawyk w całym procesie.</p>
+<h3>3. Podstawowa korekta światła</h3>
+<p>Otwórz zdjęcie w module obróbki (Develop / Edytuj). Pracuj od góry do dołu panelu:</p>
+<ul>
+<li><strong>Ekspozycja</strong> – ogólna jasność. Ustaw tak, by zdjęcie wyglądało naturalnie.</li>
+<li><strong>Światła</strong> w dół – odzyskasz szczegóły na jasnym niebie. <strong>Cienie</strong> w górę – rozjaśnisz ciemne partie.</li>
+<li><strong>Biele i czernie</strong> – ustawiają zakres tonalny. Nie przesadzaj, żeby nie „ucinać” szczegółów.</li>
+<li><strong>Kontrast</strong> – dodawaj ostrożnie, na końcu.</li>
+</ul>
+<h3>4. Kolor i kadr</h3>
+<p>Skoryguj <strong>temperaturę i odcień</strong>, jeśli zdjęcie jest za zimne lub za ciepłe. Zamiast saturacji użyj najpierw <strong>wibracji</strong>, bo działa łagodniej na kolory już mocne. Kadruj klawiszem <kbd>R</kbd>, wyrównaj horyzont i usuń zbędne krawędzie. W maskach znajdziesz też wygodne narzędzia do zaznaczania nieba i obiektu, żeby poprawić je osobno.</p>
+<h3>5. Wyeksportuj plik</h3>
+<p>Do internetu: format <strong>JPEG</strong>, przestrzeń barw <strong>sRGB</strong>, jakość około 80–90 i dłuższy bok w granicach 2000–2500 px. Do druku zostaw pełny rozmiar i ustaw zgodnie z wymaganiami drukarni. Eksport nie zmienia oryginału.</p>
+
+<h2 id="photoshop">Photoshop w 5 krokach</h2>
+<h3>1. Otwórz obraz i poznaj układ</h3>
+<p>Po lewej masz <strong>pasek narzędzi</strong>, po prawej panele, z których najważniejszy jest <strong>Warstwy</strong>. Dla spokoju na start włącz widok „Podstawy” (Essentials), jeśli jest dostępny.</p>
+<h3>2. Zrozum warstwy</h3>
+<p>Warstwy to przezroczyste kartki ułożone jedna na drugiej. Zamiast zmieniać obraz bezpośrednio, dodawaj zmiany na osobnych warstwach. Dzięki temu zawsze możesz je wyłączyć albo poprawić. Skopiuj warstwę klawiszem <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>J</kbd> i pracuj na kopii.</p>
+<h3>3. Warstwy dopasowania i maski</h3>
+<p>Zamiast korygować jasność czy kolor wprost na zdjęciu, dodaj <strong>warstwę dopasowania</strong> (np. Krzywe, Poziomy, Barwa/Nasycenie). Każda ma własną <strong>maskę</strong>: biały kolor maski pokazuje efekt, czarny go ukrywa. Pędzlem (<kbd>B</kbd>) malujesz po masce, żeby zastosować korektę tylko tam, gdzie chcesz. To podstawa tak zwanej <em>obróbki nieniszczącej</em>.</p>
+<h3>4. Zaznaczanie i retusz</h3>
+<p>Do zaznaczania obiektów użyj narzędzia <em>Zaznaczanie obiektu</em> (<kbd>W</kbd>) albo funkcji zaznaczania obiektu na pasku opcji. Do usuwania drobnych niedoskonałości posłuży pędzel korygujący. W nowszych wersjach dostępne są też funkcje oparte na generatywnej AI (np. wypełnienie generatywne), które mogą wymagać konta i dostępnych kredytów. Sprawdź aktualne zasady u Adobe.</p>
+<h3>5. Zapisz i wyeksportuj</h3>
+<p>Zapisz pracę jako <strong>PSD</strong>, żeby zachować wszystkie warstwy i móc ją później poprawiać. Gotowy plik do publikacji wyeksportuj przez <em>Plik → Eksportuj jako</em> (<kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>W</kbd>) do PNG lub JPEG.</p>
+
+<h2 id="razem">Jak połączyć oba programy</h2>
+<p>Sprawdzony schemat pracy wygląda tak:</p>
+<ol>
+<li>W <strong>Lightroomie</strong> zaimportuj serię, wybierz najlepsze zdjęcia i zrób podstawową korektę światła oraz koloru.</li>
+<li>Jeśli zdjęcie wymaga czegoś więcej (usunięcie obiektu, montaż, tekst), otwórz je w Photoshopie z menu <em>Zdjęcie → Edytuj w → Photoshop</em> (w Lightroomie Classic również <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>E</kbd>).</li>
+<li>W Photoshopie wprowadź poprawki na warstwach i zapisz. Plik wróci do biblioteki Lightrooma obok oryginału.</li>
+<li>Wyeksportuj gotową wersję z Lightrooma.</li>
+</ol>
+<p>Dzięki temu nie niszczysz oryginału, a do cięższych narzędzi sięgasz tylko wtedy, gdy są potrzebne.</p>
+
+<h2 id="bledy">Najczęstsze błędy początkujących</h2>
+<ul>
+<li><strong>Przesadzona obróbka</strong> – zbyt mocny kontrast, nasycenie i ostrość. Cofnij się o krok i porównaj z oryginałem.</li>
+<li><strong>Praca na oryginale w Photoshopie</strong> – zawsze kopiuj warstwę lub używaj warstw dopasowania.</li>
+<li><strong>Brak kopii zapasowej</strong> oryginalnych plików.</li>
+<li><strong>Eksport w złej jakości lub rozmiarze</strong> – inne ustawienia na internet, inne do druku.</li>
+<li><strong>Uczenie się wszystkiego naraz</strong> – opanuj najpierw kilka suwaków i warstwy, resztę dokładaj stopniowo.</li>
+</ul>
+
+<h2 id="skroty">Skróty, które warto znać</h2>
+<table>
+<tr><th>Akcja</th><th>Skrót (Windows / Mac)</th></tr>
+<tr><td>Cofnij</td><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Cmd</kbd>+<kbd>Z</kbd></td></tr>
+<tr><td>Skopiuj warstwę (Photoshop)</td><td><kbd>Ctrl</kbd>+<kbd>J</kbd> / <kbd>Cmd</kbd>+<kbd>J</kbd></td></tr>
+<tr><td>Przekształcanie swobodne (Photoshop)</td><td><kbd>Ctrl</kbd>+<kbd>T</kbd> / <kbd>Cmd</kbd>+<kbd>T</kbd></td></tr>
+<tr><td>Pędzel / Przesuń (Photoshop)</td><td><kbd>B</kbd> / <kbd>V</kbd></td></tr>
+<tr><td>Kadrowanie (Lightroom)</td><td><kbd>R</kbd></td></tr>
+</table>
+
+<h2>Co dalej?</h2>
+<p>Gdy opanujesz podstawy, łatwo pójść dalej bez instalowania kolejnych programów: <a data-canva href="https://www.canva.com/pro/">Canva Pro</a> sprawdzi się przy szybkich projektach na social media i materiałach marketingowych, także dla amatorów, a <a data-adobe href="https://www.adobe.com/pl/products/firefly.html">Firefly</a> to narzędzie do generatywnej AI. Na stronie głównej znajdziesz też moje <a href="index.html#portfolio">portfolio w Adobe Stock</a>.</p>
+<p>
+<a class="btn" data-adobe href="https://www.adobe.com/pl/products/photoshop.html">Photoshop</a>
+<a class="btn ghost" data-adobe href="https://www.adobe.com/pl/products/photoshop-lightroom.html">Lightroom</a>
+<a class="btn ghost" href="blog.html">← Wszystkie wpisy</a></p>
+<p class="note">Treść ma charakter poglądowy, a nazwy i układ menu mogą różnić się w zależności od wersji programu i języka interfejsu.</p>
+</main>
+<footer>
+<div>&copy; 2026 Dawid · <a href="index.html#privacy">Polityka prywatności</a> · Kontakt: <a href="mailto:bania003@op.pl">bania003@op.pl</a></div>
+<div class="aff-note" style="margin-top:8px;display:none">Ten wpis zawiera linki partnerskie. Jeśli z nich skorzystasz, mogę otrzymać prowizję, a Ty nie płacisz więcej.</div>
+<div style="margin-top:8px">Adobe, Adobe Stock, Photoshop, Lightroom i Creative Cloud są znakami towarowymi firmy Adobe. Ta strona jest niezależna – nie jest oficjalną stroną Adobe ani nie jest przez nią sponsorowana.</div>
+</footer>
+<script src="config.js"></script>
+<script>
+document.querySelectorAll('a[data-canva]').forEach(function(a){a.target='_blank';a.rel=CANVA_ACTIVE?'noopener sponsored':'noopener noreferrer';a.href=canvaLink()});
+document.querySelectorAll('a[data-adobe]').forEach(function(a){a.target='_blank';a.rel=AFF_ACTIVE?'noopener sponsored':'noopener noreferrer';if(AFF_ACTIVE)a.href=affLink(a.href)});
+if(ANY_AFF)document.querySelectorAll('.aff-note').forEach(function(n){n.style.display='block'});
+</script>
+</body></html>
