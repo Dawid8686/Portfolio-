@@ -10,6 +10,13 @@ const CANVA_ACTIVE = !!CANVA_URL;
 const canvaLink = () => CANVA_URL || "https://www.canva.com/pro/";
 const ANY_AFF = AFF_ACTIVE || CANVA_ACTIVE;   // oznaczenia partnerskie pokazujemy, gdy którykolwiek link jest naprawdę partnerski
 
+// ===== AWIN: World Businesses for Sale =====
+const AWIN_URL = "";   // wklej swój link śledzący Awin (panel Awin > Linki) DOPIERO po akceptacji w programie; do tego czasu zostaw puste
+const AWIN_CODE = "AWIN10";   // regulamin: wolno używać tylko zatwierdzonych ofert i materiałów, więc kod musi być Twoim kodem z panelu Awin (przypisanym do Twojego konta); pokazuje się tylko gdy AWIN_URL jest wypełniony
+const AWIN_PLAIN = "https://www.worldbusinessesforsale.com/";   // zwykły adres serwisu (bez prowizji) używany do czasu wklejenia AWIN_URL; sprawdź, czy jest poprawny
+const AWIN_ACTIVE = !!AWIN_URL;
+function awinLink(ref){ if(!AWIN_ACTIVE) return AWIN_PLAIN; return AWIN_URL + (AWIN_URL.indexOf("?")>-1 ? "&" : "?") + "clickref=" + encodeURIComponent(ref||""); }
+
 // ===== LICZNIK ODWIEDZIN (Cloudflare Worker) =====
 const COUNTER_URL = "https://licznik.bania003.workers.dev";   // wklej adres swojego Workera, np. https://licznik.twoja-nazwa.workers.dev (bez / na końcu)
 (function(){
