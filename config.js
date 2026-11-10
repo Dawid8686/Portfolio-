@@ -8,7 +8,13 @@ function affLink(u){ return AFF_ACTIVE ? "https://prf.hn/click/camref:" + CAMREF
 const CANVA_URL = "";   // wklej swój link partnerski Canva po akceptacji w programie; do tego czasu link prowadzi na zwykłą stronę Canva Pro
 const CANVA_ACTIVE = !!CANVA_URL;
 const canvaLink = () => CANVA_URL || "https://www.canva.com/pro/";
-const ANY_AFF = AFF_ACTIVE || CANVA_ACTIVE;   // oznaczenia partnerskie pokazujemy, gdy którykolwiek link jest naprawdę partnerski
+// ===== SKYLUM / Luminar (Impact; linki z maila powitalnego) =====
+const SKYLUM_DESKTOP = "https://skylum.evyy.net/c/7970527/3849543/3255";
+const SKYLUM_MOBILE  = "https://skylum.evyy.net/c/7970527/1965581/3255";
+const SKYLUM_WEB     = "https://skylum.evyy.net/c/7970527/4071016/3255";
+const SKYLUM_ACTIVE = !!SKYLUM_DESKTOP;
+function skylumLink(t){ return t==="mobile" ? SKYLUM_MOBILE : t==="web" ? SKYLUM_WEB : SKYLUM_DESKTOP; }
+const ANY_AFF = AFF_ACTIVE || CANVA_ACTIVE || SKYLUM_ACTIVE;   // oznaczenia partnerskie pokazujemy, gdy którykolwiek link jest naprawdę partnerski
 
 // ===== AWIN: World Businesses for Sale =====
 const AWIN_URL = "";   // wklej swój link śledzący Awin (panel Awin > Linki) DOPIERO po akceptacji w programie; do tego czasu zostaw puste
