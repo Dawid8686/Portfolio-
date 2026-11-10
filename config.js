@@ -17,7 +17,7 @@ function skylumLink(t){ return t==="mobile" ? SKYLUM_MOBILE : t==="web" ? SKYLUM
 const ANY_AFF = AFF_ACTIVE || CANVA_ACTIVE || SKYLUM_ACTIVE;   // oznaczenia partnerskie pokazujemy, gdy którykolwiek link jest naprawdę partnerski
 
 // ===== AWIN: World Businesses for Sale =====
-const AWIN_URL = "";   // wklej swój link śledzący Awin (panel Awin > Linki) DOPIERO po akceptacji w programie; do tego czasu zostaw puste
+const AWIN_URL = "https://www.awin1.com/cread.php?awinmid=116725&awinaffid=3124347&ued=https%3A%2F%2Fworldbusinessesforsale.com%2F";   // wklej swój link śledzący Awin (panel Awin > Linki) DOPIERO po akceptacji w programie; do tego czasu zostaw puste
 const AWIN_CODE = "AWIN10";   // regulamin: wolno używać tylko zatwierdzonych ofert i materiałów, więc kod musi być Twoim kodem z panelu Awin (przypisanym do Twojego konta); pokazuje się tylko gdy AWIN_URL jest wypełniony
 const AWIN_PLAIN = "https://www.worldbusinessesforsale.com/";   // zwykły adres serwisu (bez prowizji) używany do czasu wklejenia AWIN_URL; sprawdź, czy jest poprawny
 const AWIN_ACTIVE = !!AWIN_URL;
