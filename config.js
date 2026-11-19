@@ -13,15 +13,23 @@ const SKYLUM_DESKTOP = "https://skylum.evyy.net/c/7970527/3849543/3255";
 const SKYLUM_MOBILE  = "https://skylum.evyy.net/c/7970527/1965581/3255";
 const SKYLUM_WEB     = "https://skylum.evyy.net/c/7970527/4071016/3255";
 const SKYLUM_ACTIVE = !!SKYLUM_DESKTOP;
-function skylumLink(t){ return t==="mobile" ? SKYLUM_MOBILE : t==="web" ? SKYLUM_WEB : SKYLUM_DESKTOP; }
+// Nowe linki z maila (listopad 2026): Prime jednorazowo (€69), upgrade All-in-One dla subskrybentów (€119/rok), Black Friday
+const SKYLUM_PRIME   = "https://skylum.evyy.net/c/7970527/3993634/3255";
+const SKYLUM_UPGRADE = "https://skylum.evyy.net/c/7970527/4158121/3255";
+const SKYLUM_BF      = "https://skylum.evyy.net/c/7970527/4120783/3255";
+const SKYLUM_BF_FROM = "2026-11-18", SKYLUM_BF_TO = "2026-12-02";   // okno promocji Black Friday: SPRAWDŹ datę końca w mailu/panelu Impact i popraw
+function bfOn(){ var d=new Date().toISOString().slice(0,10); return d>=SKYLUM_BF_FROM && d<=SKYLUM_BF_TO; }
+// typy: "desktop" (domyślny; w oknie BF prowadzi na link Black Friday), "mobile", "web", "prime", "upgrade", "bf"
+function skylumLink(t){
+  if(t==="mobile") return SKYLUM_MOBILE; if(t==="web") return SKYLUM_WEB;
+  if(t==="prime") return SKYLUM_PRIME; if(t==="upgrade") return SKYLUM_UPGRADE; if(t==="bf") return SKYLUM_BF;
+  return bfOn() ? SKYLUM_BF : SKYLUM_DESKTOP;
+}
+
 const ANY_AFF = AFF_ACTIVE || CANVA_ACTIVE || SKYLUM_ACTIVE;   // oznaczenia partnerskie pokazujemy, gdy którykolwiek link jest naprawdę partnerski
 
-// ===== AWIN: World Businesses for Sale =====
-const AWIN_URL = "https://www.awin1.com/cread.php?awinmid=116725&awinaffid=3124347&ued=https%3A%2F%2Fworldbusinessesforsale.com%2F";   // wklej swój link śledzący Awin (panel Awin > Linki) DOPIERO po akceptacji w programie; do tego czasu zostaw puste
-const AWIN_CODE = "AWIN10";   // regulamin: wolno używać tylko zatwierdzonych ofert i materiałów, więc kod musi być Twoim kodem z panelu Awin (przypisanym do Twojego konta); pokazuje się tylko gdy AWIN_URL jest wypełniony
-const AWIN_PLAIN = "https://www.worldbusinessesforsale.com/";   // zwykły adres serwisu (bez prowizji) używany do czasu wklejenia AWIN_URL; sprawdź, czy jest poprawny
-const AWIN_ACTIVE = !!AWIN_URL;
-function awinLink(ref){ if(!AWIN_ACTIVE) return AWIN_PLAIN; return AWIN_URL + (AWIN_URL.indexOf("?")>-1 ? "&" : "?") + "clickref=" + encodeURIComponent(ref||""); }
+// ===== MIEJSCE NA LINK (nieużywane na stronie) =====
+const AWIN_URL = "";   // opcjonalnie: wklej tu link partnerski, gdy będzie potrzebny
 
 // ===== LICZNIK ODWIEDZIN (Cloudflare Worker) =====
 const COUNTER_URL = "https://licznik.bania003.workers.dev";   // wklej adres swojego Workera, np. https://licznik.twoja-nazwa.workers.dev (bez / na końcu)

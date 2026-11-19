@@ -8,74 +8,80 @@
   </url>
   <url>
     <loc>https://dav-studio.vercel.app/blog.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dav-studio.vercel.app/blog-pitch-deck-en.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <loc>https://dav-studio.vercel.app/blog-luminar-masking-en.html</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-pitch-deck-en.html"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-pitch-deck-pl.html"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://dav-studio.vercel.app/blog-pitch-deck-nl.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-pitch-deck-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-luminar-masking-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-luminar-masking-pl.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-luminar-masking-en.html"/>
   </url>
   <url>
-    <loc>https://dav-studio.vercel.app/blog-pitch-deck-pl.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <loc>https://dav-studio.vercel.app/blog-luminar-masking-pl.html</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-pitch-deck-en.html"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-pitch-deck-pl.html"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://dav-studio.vercel.app/blog-pitch-deck-nl.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-pitch-deck-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-luminar-masking-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-luminar-masking-pl.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-luminar-masking-en.html"/>
   </url>
   <url>
-    <loc>https://dav-studio.vercel.app/blog-pitch-deck-nl.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <loc>https://dav-studio.vercel.app/blog-luminar-prime-one-time-en.html</loc>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-pitch-deck-en.html"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-pitch-deck-pl.html"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://dav-studio.vercel.app/blog-pitch-deck-nl.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-pitch-deck-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-luminar-prime-one-time-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-luminar-prime-one-time-pl.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-luminar-prime-one-time-en.html"/>
   </url>
   <url>
-    <loc>https://dav-studio.vercel.app/blog-business-photos-pl.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://dav-studio.vercel.app/blog-luminar-prime-one-time-pl.html</loc>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-business-photos-pl.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-business-photos-en.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-business-photos-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-luminar-prime-one-time-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-luminar-prime-one-time-pl.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-luminar-prime-one-time-en.html"/>
   </url>
   <url>
-    <loc>https://dav-studio.vercel.app/blog-business-photos-en.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://dav-studio.vercel.app/blog-luminar-all-in-one-upgrade-en.html</loc>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-business-photos-pl.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-business-photos-en.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-business-photos-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-luminar-all-in-one-upgrade-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-luminar-all-in-one-upgrade-pl.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-luminar-all-in-one-upgrade-en.html"/>
   </url>
   <url>
-    <loc>https://dav-studio.vercel.app/blog-investor-view-pl.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://dav-studio.vercel.app/blog-luminar-all-in-one-upgrade-pl.html</loc>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-investor-view-pl.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-investor-view-en.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-investor-view-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-luminar-all-in-one-upgrade-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-luminar-all-in-one-upgrade-pl.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-luminar-all-in-one-upgrade-en.html"/>
   </url>
   <url>
-    <loc>https://dav-studio.vercel.app/blog-investor-view-en.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://dav-studio.vercel.app/blog-luminar-black-friday-en.html</loc>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-investor-view-pl.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-investor-view-en.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-investor-view-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-luminar-black-friday-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-luminar-black-friday-pl.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-luminar-black-friday-en.html"/>
+  </url>
+  <url>
+    <loc>https://dav-studio.vercel.app/blog-luminar-black-friday-pl.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dav-studio.vercel.app/blog-luminar-black-friday-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dav-studio.vercel.app/blog-luminar-black-friday-pl.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dav-studio.vercel.app/blog-luminar-black-friday-en.html"/>
   </url>
 </urlset>
